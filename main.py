@@ -61,9 +61,12 @@ async def compare_faces(
 
     success = sum(matches) >= MIN_MATCHES
 
+    best_similarity = max(similarities)
+
     return CompareResponse(
         matches=matches,
         similarities=similarities,
+        best_similarity=max(similarities),
         score=score,
         success=success
     )
