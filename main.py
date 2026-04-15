@@ -66,7 +66,7 @@ async def compare_faces(
     return CompareResponse(
         matches=matches,
         similarities=similarities,
-        best_similarity=max(similarities),
+        best_similarity=best_similarity,
         score=score,
         success=success
     )
